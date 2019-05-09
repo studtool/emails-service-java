@@ -28,3 +28,15 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
+
+task printJarPath {
+    doLast {
+        print jar.getArchiveFile().get()
+    }
+}
+
+task printVersion {
+    doLast {
+        print project.version
+    }
+}
